@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Manufacturing Growth Blueprint — HV Growth</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+
+    <!-- Registration Overlay -->
+    <section class="registration-overlay">
+
+        <div class="registration-modal">
+
+            <!-- Header -->
+            <div class="registration-header">
+                <button class="close-btn">&times;</button>
+
+                <h2>Registration</h2>
+                <p>Fill in the details to proceed with payment.</p>
+            </div>
+
+            <!-- Form -->
+            <form class="registration-form" action="" method="post">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" placeholder="Enter 10-digit mobile number">
+                </div>
+
+                <button type="submit" class="pay-btn">
+                    Pay & Register
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+    <!-- ============ TOP BAR ============ -->
+    <div class="topbar">
+        <div class="topbar__inner">
+            <div class="topbar__right">
+                <p class="topbar__msg">Live Online Masterclass for just <strong>₹49</strong></p>
+                <div class="countdown" id="topCountdown" aria-label="Time remaining to reserve a seat">
+                    <div class="countdown__unit"><span class="countdown__num" data-unit="days">00</span><span
+                            class="countdown__label">DAYS</span></div>
+                    <div class="timercollon">:</div>
+                    <div class="countdown__unit"><span class="countdown__num" data-unit="hours">00</span><span
+                            class="countdown__label">HRS</span></div>
+                    <div class="timercollon">:</div>
+
+                    <div class="countdown__unit"><span class="countdown__num" data-unit="mins">00</span><span
+                            class="countdown__label">MIN</span></div>
+                    <div class="timercollon">:</div>
+
+                    <div class="countdown__unit"><span class="countdown__num green__text"
+                            data-unit="secs">00</span><span class="countdown__label green__text">SEC</span></div>
+
+                </div>
+            </div>
+            <a onclick="openRegistration()" class="btn btn--green btn--sm topbar-CTA">Reserve Your Seat </span><i
+                    class="fa-solid btn__icon fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+        <div class="wrap hero__inner">
+            <div class="brand">
+                <img src="assets/logo.webp" alt="">
+            </div>
+
+            <p class="badge"><span class="badge__dot"></span>LIVE ONLINE MASTERCLASSES</p>
+
+            <h1 class="hero__title">The Manufacturing <span class="hero__title--accent">Growth Blueprint</span></h1>
+
+            <p class="hero__sub"><strong>Your Factory Is Growing. But Is the Chaos Growing Faster?</strong>
+                Learn how to reduce delays, improve accountability, and build a factory that runs on systems — not
+                constant firefighting.</p>
+
+            <ul class="pill-row" role="list">
+                <li class="pill">
+                    <img src="assets/Layer_1-2.svg" alt="" class="pill_icon">
+                    21 August 2026
+                </li>
+                <li class="pill">
+                    <img src="assets/Layer_1-1.svg" alt="" class="pill_icon">
+                    4:00 PM – 6:00 PM
+                </li>
+                <li class="pill">
+                    <img src="assets/Layer_1.svg" alt="" class="pill_icon">
+                    Live Online
+                </li>
+                <li class="pill">
+                    <img src="assets/Container.svg" alt="" class="pill_icon">
+                    49 Only
+                </li>
+            </ul>
+
+            <a onclick="openRegistration()" class="btn btn--green btn--lg">Reserve Your Seat <i
+                    class="fa-solid btn__icon fa-arrow-right"></i></a>
+        </div>
+    </header>
+
+    <!-- ============ PRICE PANEL ============ -->
+    <section class="section">
+        <div class="wrap">
+            <div class="panel panel--price">
+
+                <h2 class="panel__title">₹49 Won't Even Buy You a <span class="hero__title--accent">Coffee</span></h2>
+                <p class="panel__sub">But it could be the smartest ₹49 you invest in your business.</p>
+                <ul class="tag-row" role="list">
+                    <li class="tag">In just 2 hours</li>
+                    <li class="tag">You'll learn practical management systems to reduce delays</li>
+                    <li class="tag">Improve accountability</li>
+                    <li class="tag">Bring more control to your factory</li>
+                </ul>
+                <div class="doodle"></div>
+                <!-- <img src="assets/doodle.png" alt=""> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SPEAKER ============ -->
+    <section class="section section--tint">
+        <div class="wrap speaker">
+            <div class="speaker__portrait">
+
+                <img class="avatar-frame" src="assets/harshal.png" alt="">
+
+
+
+            </div>
+
+            <div class="speaker__content">
+                <p class="badge badge--left"><span class="badge__dot"></span>THE WOMAN BEHIND THE METHOD</p>
+                <h2 class="section__title">Learn From — <div class="hero__title--accent">Harshal Varkhedkar</div>
+                </h2>
+                <p class="speaker__bio">With over 25 years of experience, Harshal simplifies globally proven management
+                    systems into practical systems that manufacturing business owners can implement immediately.</p>
+
+                <dl class="stat-grid">
+                    <div class="stat">
+                        <dt class="stat__num">25+</dt>
+                        <dd class="stat__label">Years of Experience</dd>
+                    </div>
+                    <div class="stat">
+                        <dt class="stat__num">500+</dt>
+                        <dd class="stat__label">Business Owners Mentored</dd>
+                    </div>
+                    <div class="stat">
+                        <dt class="stat__num">2×</dt>
+                        <dd class="stat__label">Published Author</dd>
+                    </div>
+                    <div class="stat">
+                        <dt class="stat__num">6</dt>
+                        <dd class="stat__label">Sigma Black Belt</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHO IS THIS FOR ============ -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="section__title section__title--center">Who is this <span
+                    class="hero__title--accent">Workshop</span> for?</h2>
+            <p class="section__sub section__sub--center">This workshop is designed for:</p>
+
+            <div class="card-grid card-grid--4">
+                <div class="card card1">
+                    <div class="card__icon-wrap">
+                        <img src="assets/Icon-2.svg" alt="">
+                    </div>
+                    <h3 class="card__title">Manufacturing Business Owners</h3>
+                </div>
+                <div class="card card2">
+                    <div class="card__icon-wrap">
+                        <img src="assets/office.svg" alt="">
+
+                    </div>
+                    <h3 class="card__title">Owner-Managers Looking for Better Control</h3>
+                </div>
+                <div class="card card3">
+                    <div class="card__icon-wrap">
+                        <img src="assets/Icon-1.svg" alt="">
+
+                    </div>
+                    <h3 class="card__title">Teams with 1–50 Employees</h3>
+                </div>
+                <div class="card card4">
+                    <div class="card__icon-wrap">
+                        <img src="assets/Icon.svg" alt="">
+
+                    </div>
+                    <h3 class="card__title">Growing Businesses Facing Operational Chaos</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ PROBLEMS ============ -->
+    <section class="section section--tint">
+        <div class="wrap">
+            <h2 class="section__title section__title--center">Do these <span class="hero__title--accent">Problems</span>
+                Sound Familiar?</h2>
+            <p class="section__sub section__sub--center">If you're running a manufacturing business, you've probably
+                experienced this:</p>
+
+            <div class="card-grid--3 card-grid--2">
+                <div class="alert-card">
+                    <img class="alert-card__icon" src="assets/warning.svg" alt="">
+                    <p>Customers keep following up for updates.</p>
+                </div>
+                <div class="alert-card">
+                    <img class="alert-card__icon" src="assets/warning.svg" alt="">
+                    <p>Production schedules change every day.</p>
+                </div>
+                <div class="alert-card">
+                    <img class="alert-card__icon" src="assets/warning.svg" alt="">
+                    <p>Your team depends on you for every decision.</p>
+                </div>
+                <div class="alert-card">
+                    <img class="alert-card__icon" src="assets/warning.svg" alt="">
+                    <p>Delivery deadlines keep getting pushed.</p>
+                </div>
+                <div class="alert-card">
+                    <img class="alert-card__icon" src="assets/warning.svg" alt="">
+
+                    <p>Inventory is either piling up or falling short.</p>
+                </div>
+                <div class="alert-card">
+
+                    <img class="alert-card__icon" src="assets/warning.svg" alt="">
+                    <p>You're busy all day but still feel like nothing is truly under control.</p>
+                </div>
+            </div>
+
+            <p class="center-note"></p>
+            <div class="center-cta"><a onclick="openRegistration()" class="btn btn--green btn--lg">Reserve Your Seat
+                    <i class="fa-solid btn__icon fa-arrow-right"></i></a></div>
+        </div>
+    </section>
+
+    <!-- ============ OUTCOMES ============ -->
+    <section class="section section--dark">
+        <div class="wrap">
+            <h2 class="section__title section__title--center section__title--onDark">You'll Walk Away With</h2>
+            <p class="section__sub section__sub--center section__sub--onDark">Practical frameworks and tools you can
+                start applying immediately:</p>
+
+            <div class="outcome-grid">
+                <div class="outcome outcome1">
+                    <div class="outcome__icon">
+                        <img src="assets/outcome1.png" alt="">
+                    </div>
+                    <h3>A simple production planning framework</h3>
+                </div>
+                <div class="outcome outcome2">
+                    <div class="outcome__icon">
+                        <img src="assets/outcome2.svg" alt="">
+                    </div>
+                    <h3>How to identify problems before they become costly</h3>
+                </div>
+                <div class="outcome outcome3">
+                    <div class="outcome__icon">
+                        <img src="assets/outcome3.svg" alt="">
+                    </div>
+                    <h3>Improve team accountability without constant follow-ups</h3>
+                </div>
+                <div class="outcome outcome4">
+                    <div class="outcome__icon">
+                        <img src="assets/outcome4.svg" alt="">
+                    </div>
+                    <h3>Improve coordination between production, purchase, and dispatch</h3>
+                </div>
+                <div class="outcome outcome5">
+                    <div class="outcome__icon">
+                        <img src="assets/outcome5.svg" alt="">
+                    </div>
+                    <h3>Make faster, more confident business decisions</h3>
+                </div>
+                <div class="outcome outcome6">
+                    <div class="outcome__icon">
+                        <img src="assets/outcome6.svg" alt="">
+                    </div>
+                    <h3>Practical tools and worksheets for immediate implementation</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHY THIS WORKS ============ -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="section__title section__title--center">Why this <span class="hero__title--accent">Works</span>
+            </h2>
+            <p class="section__sub section__sub--center">Learn proven management frameworks simplified for everyday
+                manufacturing challenges.</p>
+
+            <div class="compare">
+                <ul class="compare__list compare__list--against">
+                    <li><img class="compare__mark" src="assets/star.svg" alt="">Most workshops teach concepts.</li>
+                    <li><img class="compare__mark" src="assets/star.svg" alt="">Proven Project Management &amp; Six
+                        Sigma
+                        Frameworks are left as theory.</li>
+                    <li><img class="compare__mark" src="assets/star.svg" alt="">No complicated theory, yet no
+                        application
+                        either.</li>
+                </ul>
+                <div class="vline"></div>
+                <ul class="compare__list compare__list--for">
+                    <li><img class="compare__mark" src="assets/star.svg" alt="">This workshop teaches implementation.
+                    </li>
+                    <li><img class="compare__mark" src="assets/star.svg" alt="">Proven Project Management &amp; Six
+                        Sigma
+                        Frameworks, applied.</li>
+                    <li><img class="compare__mark" src="assets/star.svg" alt="">Simple systems. Better control.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section section--tint">
+        <div class="wrap">
+            <p class="badge badge--center"><span class="badge__dot"></span>REAL RESULTS</p>
+            <h2 class="section__title section__title--center">What Business Owners <span
+                    class="hero__title--accent">Say</span></h2>
+
+            <div class="testi-row">
+
+                <div class="testi">
+                    <p>"Our biggest problem was that every small production issue came back to me. The workshop helped
+                        me place clearer responsibilities. I'm not following up on everything anymore."</p>
+                    <footer>
+                        <div class="testi__avatar" style="background:#F4C77A"><img src="assets/Avatar-1.webp" alt="">
+                        </div>
+                        <div class="testi_user">
+
+                            <span class="testi__name">Rajesh Patel</span>
+                            <span class="testi__post">Co-founder & CEO</span>
+                            <span class="testi__stars">★★★★★</span>
+                        </div>
+                    </footer>
+                </div>
+                <div class="testi">
+
+                    <p>"We were constantly changing production plans because of last-minute issues. The planning
+                        framework gave us a much clearer way to organize our work."</p>
+                    <footer>
+                        <div class="testi__avatar" style="background:#F4C77A"><img src="assets/Avatar-2.webp" alt="">
+                        </div>
+                        <div class="testi_user">
+
+                            <span class="testi__name">Rajesh Patel</span>
+                            <span class="testi__post">Co-founder & CEO</span>
+                            <span class="testi__stars">★★★★★</span>
+                        </div>
+                    </footer>
+                </div>
+                <div class="testi">
+
+                    <p>"I liked that the workshop focused on practical factory problems rather than complicated
+                        management theory. I could immediately identify areas where we needed better systems."</p>
+                    <footer>
+                        <div class="testi__avatar" style="background:#F4C77A"><img src="assets/Avatar-3.webp" alt="">
+                        </div>
+                        <div class="testi_user">
+
+                            <span class="testi__name">Rajesh Patel</span>
+                            <span class="testi__post">Co-founder & CEO</span>
+                            <span class="testi__stars">★★★★★</span>
+                        </div>
+                    </footer>
+                </div>
+                <div class="testi">
+
+                    <p>"What could've taken us months of trial and error, the workshop compressed into two focused
+                        hours. Worth far more than ₹49."</p>
+                    <footer>
+                        <div class="testi__avatar" style="background:#F4C77A"><img src="assets/Avatar.webp" alt="">
+                        </div>
+                        <div class="testi_user">
+
+                            <span class="testi__name">Rajesh Patel</span>
+                            <span class="testi__post">Co-founder & CEO</span>
+                            <span class="testi__stars">★★★★★</span>
+                        </div>
+                    </footer>
+                </div>
+                <div class="testi">
+                    <p>"The biggest improvement was having a clear process for handling daily issues. Our team is now
+                        much more organized and accountable."</p>
+
+                    <footer>
+                        <div class="testi__avatar" style="background:#A8D8FF"></div>
+
+                        <div class="testi_user">
+                            <span class="testi__name">Amit Sharma</span>
+                            <span class="testi__post">Managing Director</span>
+                            <span class="testi__stars">★★★★★</span>
+                        </div>
+                    </footer>
+                </div>
+
+
+                <div class="testi">
+                    <p>"The practical approach made it easy for us to understand what needed to change. We started
+                        implementing the ideas immediately."</p>
+
+                    <footer>
+                        <div class="testi__avatar" style="background:#C9B6FF"></div>
+
+                        <div class="testi_user">
+                            <span class="testi__name">Vikram Mehta</span>
+                            <span class="testi__post">Founder & Director</span>
+                            <span class="testi__stars">★★★★★</span>
+                        </div>
+                    </footer>
+                </div>
+                <div class="testi">
+                    <p>"Our biggest problem was that every small production issue came back to me. The workshop helped
+                        me place clearer responsibilities. I'm not following up on everything anymore."</p>
+                    <footer>
+                        <div class="testi__avatar" style="background:#F4C77A"><img src="assets/Avatar-1.webp" alt="">
+                        </div>
+                        <div class="testi_user">
+
+                            <span class="testi__name">Rajesh Patel</span>
+                            <span class="testi__post">Co-founder & CEO</span>
+                            <span class="testi__stars">★★★★★</span>
+                        </div>
+                    </footer>
+                </div>
+                <div class="testi">
+
+                    <p>"We were constantly changing production plans because of last-minute issues. The planning
+                        framework gave us a much clearer way to organize our work."</p>
+                    <footer>
+                        <div class="testi__avatar" style="background:#F4C77A"><img src="assets/Avatar-2.webp" alt="">
+                        </div>
+                        <div class="testi_user">
+
+                            <span class="testi__name">Rajesh Patel</span>
+                            <span class="testi__post">Co-founder & CEO</span>
+                            <span class="testi__stars">★★★★★</span>
+                        </div>
+                    </footer>
+                </div>
+                <div class="testi">
+
+                    <p>"I liked that the workshop focused on practical factory problems rather than complicated
+                        management theory. I could immediately identify areas where we needed better systems."</p>
+                    <footer>
+                        <div class="testi__avatar" style="background:#F4C77A"><img src="assets/Avatar-3.webp" alt="">
+                        </div>
+                        <div class="testi_user">
+
+                            <span class="testi__name">Rajesh Patel</span>
+                            <span class="testi__post">Co-founder & CEO</span>
+                            <span class="testi__stars">★★★★★</span>
+                        </div>
+                    </footer>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="section" id="reserve">
+        <div class="wrap">
+            <div class="panel panel--final">
+                <p class="badge badge--onDark"><span class="badge__dot"></span>LIVE ONLINE MASTERCLASS</p>
+                <div class="panel__final-grid">
+                    <div class="panel__final-left">
+                        <p class="price-huge">₹49 ONLY</p>
+                        <div>
+
+
+                            <p class="finalCountdown__note">Limited Until:</p>
+                            <div class="countdown countdown--lg" id="finalCountdown">
+                                <div class="countdown__unit"><span class="countdown__num"
+                                        data-unit="days">00</span><span class="countdown__label">Days</span></div>
+                                <div class="countdown__unit"><span class="countdown__num"
+                                        data-unit="hours">00</span><span class="countdown__label">Hours</span></div>
+                                <div class="countdown__unit"><span class="countdown__num"
+                                        data-unit="mins">00</span><span class="countdown__label">Minutes</span></div>
+                                <div class="countdown__unit green__text"><span class="countdown__num"
+                                        data-unit="secs">00</span><span
+                                        class="countdown__label green__text">Seconds</span></div>
+                            </div>
+                        </div>
+                        <a onclick="openRegistration()" class="finalCTA btn">Reserve Your Seat <i
+                                class="fa-solid btn__icon fa-arrow-right"></i></a>
+                    </div>
+                    <div class="panel__final-right">
+                        <h2>Start Building a Business That Runs on Systems</h2>
+                        <p>Imagine leaving your factory at the end of the day knowing production is on track, your team
+                            knows what to do, and problems are being solved before they reach you.</p>
+                        <p>Join the workshop and take the first step toward a more predictable, better-managed business.
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section">
+        <div class="wrap wrap--narrow">
+            <p class="badge badge--center"><span class="badge__dot"></span>GOT QUESTIONS?</p>
+            <h2 class="section__title section__title--center">Frequently Asked <span
+                    class="hero__title--accent">Questions</span></h2>
+
+            <div class="faq" id="faqList">
+                <div class="faq__item is-open">
+                    <button class="faq__q" aria-expanded="true">
+                        <span>Who is this workshop for?</span><span class="faq__icon"><img
+                                src="assets/arrow-narrow-up-right.svg" alt=""></span>
+                    </button>
+                    <div class="faq__a">
+                        <p>This workshop is designed for owner-managed manufacturing businesses looking to improve
+                            planning, execution, accountability, and business control.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q" aria-expanded="false">
+                        <span>Do I need any prior management knowledge?</span><span class="faq__icon"><img
+                                src="assets/arrow-narrow-up-right.svg" alt=""></span>
+                    </button>
+                    <div class="faq__a">
+                        <p>No. Everything is explained in simple language with practical manufacturing examples.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q" aria-expanded="false">
+                        <span>Will I learn practical strategies or just theory?</span><span class="faq__icon"><img
+                                src="assets/arrow-narrow-up-right.svg" alt=""></span>
+                    </button>
+                    <div class="faq__a">
+                        <p>It's a practical workshop focused on systems, tools, and frameworks you can start
+                            implementing immediately.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q" aria-expanded="false">
+                        <span>Is this a live online workshop?</span><span class="faq__icon"><img
+                                src="assets/arrow-narrow-up-right.svg" alt=""></span>
+                    </button>
+                    <div class="faq__a">
+                        <p>Yes. It's a live, interactive session where you can ask questions and learn directly from
+                            Harshal.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q" aria-expanded="false">
+                        <span>What if I miss the live workshop?</span><span class="faq__icon"><img
+                                src="assets/arrow-narrow-up-right.svg" alt=""></span>
+                    </button>
+                    <div class="faq__a">
+                        <p>Don't worry. The session recording will be available for 7 days, so you can watch it if
+                            you're unable to attend live.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q" aria-expanded="false">
+                        <span>What will I receive after registering?</span><span class="faq__icon"><img
+                                src="assets/arrow-narrow-up-right.svg" alt=""></span>
+                    </button>
+                    <div class="faq__a">
+                        <p>You'll receive the workshop access details along with practical worksheets and implementation
+                            tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer section--tint">
+        <div class="wrap footer__inner">
+            <div class="footer__col">
+                <div class="brand brand--footer">
+                    <img src="assets/logo.png" alt="">
+                    <!-- <span class="brand__name">HV Growth</span> -->
+                </div>
+            </div>
+            <div class=" footer__col--center">
+                <p>info@hvancon.in</p>
+                <div class="footer__social">
+                    <a href="#" aria-label="Facebook"><img src="assets/facebook.svg" alt=""></a>
+                    <a href="#" aria-label="Instagram"><img src="assets/insta.svg" alt=""></a>
+                    <a href="#" aria-label="LinkedIn"><img src="assets/linkedin.svg" alt=""></a>
+                </div>
+            </div>
+            <div class=" footer__col--right">
+                <p class="footer__legal">Managed by Digi Milestone Pvt. Ltd.</p>
+                <p>www.hvgrowth.in</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

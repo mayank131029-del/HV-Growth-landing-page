@@ -217,6 +217,6 @@ function autoTestimonial() {
     });
 }
 
-setInterval(autoTestimonial, 1000);
+setInterval(autoTestimonial, 3000);
 
 

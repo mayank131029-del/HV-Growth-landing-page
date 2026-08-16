@@ -2001,6 +2001,13 @@ input:focus-visible {
     .pay-btn:active {
         transform: scale(0.99);
     }
+    /* .section__sub--center{
+        width: 100%;
+        margin: 0;
+    } */
+     .section__sub{
+        max-width: 100%;
+     }
 }
 
 

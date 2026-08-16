@@ -1534,7 +1534,7 @@ input:focus-visible {
     }
 
     .topbar__right {
-
+        gap: var(--space-3);
         width: 100%;
         justify-content: space-between;
     }
@@ -1566,10 +1566,13 @@ input:focus-visible {
     }
 
     .panel__final-grid {
+        align-items: center;
+        justify-content: center;
         grid-template-columns: 1fr;
     }
 
     .panel__final-left {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1577,8 +1580,11 @@ input:focus-visible {
         border-right: none;
         /* border-bottom: 1px dashed rgba(255, 255, 255, 0.2); */
         padding-right: 0;
-        padding: var(--space-3);
+        padding: var(--space-4);
         /* margin-bottom: var(--space-6); */
+    }
+    .badge{
+        font-size: var(--fs-xs);
     }
 
     .panel__final-right p,
@@ -1587,7 +1593,7 @@ input:focus-visible {
     }
 
     .price-huge {
-        font-size: var(--fs-2xl);
+        font-size: var(--fs-3xl);
     }
 
     .doodle {
@@ -1599,6 +1605,12 @@ input:focus-visible {
     .card-grid--2,
     .outcome-grid {
         grid-template-columns: 1fr;
+    }
+    .countdown{
+        gap: var(--space-1);
+    }
+    .countdown__num{
+        font-size: var(--fs-xs);
     }
 
     .testi-row {
@@ -1795,10 +1807,29 @@ input:focus-visible {
         width: 70%;
         height: 1px;
     }
-
+    .final__wrap{
+        padding: 0 var(--space-3);
+    }
     .panel--final {
+        gap: var(--space-3);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding: var(--space-6);
         background-size: cover;
+    }
+    .panel__final-left .btn{
+        width: 100%;
+    }
+
+    .countdown--lg .countdown__num{
+        font-size: var(--fs-lg);
+    }
+    .panel__final-right p:nth-child(3){
+        font-size: var(--fs-sm);
+    }
+    #finalCountdown{
+        gap: var(--space-0);
     }
 
     .footer__col--center,
@@ -1845,4 +1876,183 @@ input:focus-visible {
         scroll-snap-align: start;
         scroll-snap-stop: always;
     }
+
+    /* Registration form  */
+
+    /* =========================================
+   REGISTRATION MODAL — MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .registration-overlay {
+        width: 100%;
+        height: 100dvh;
+        min-height: 100dvh;
+
+        padding: 16px;
+
+        align-items: center;
+        justify-content: center;
+
+        overflow-y: auto;
+    }
+
+    .registration-modal {
+        width: 100%;
+        max-width: 430px;
+        max-height: calc(100dvh - 32px);
+
+        border-radius: 16px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .registration-header {
+        padding: 28px 45px 28px 20px;
+    }
+
+    .registration-header h2 {
+        margin-bottom: 8px;
+
+        font-size: var(--fs-xl);
+        line-height: 1.2;
+    }
+
+    .registration-header p {
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+
+    /* =========================
+       CLOSE BUTTON
+    ========================= */
+
+    .close-btn {
+        top: 16px;
+        right: 16px;
+
+        width: 30px;
+        height: 30px;
+
+        font-size: 32px;
+        line-height: 25px;
+    }
+
+
+    /* =========================
+       FORM
+    ========================= */
+
+    .registration-form {
+        padding: 24px 20px 30px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-group label {
+        margin-bottom: 7px;
+
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+    .form-group input {
+        width: 100%;
+        height: 48px;
+
+        padding: 0 14px;
+
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       PAY BUTTON
+    ========================= */
+
+    .pay-btn {
+        height: 52px;
+
+        margin-top: 5px;
+        padding: 0 16px;
+
+        border-radius: 8px;
+
+        font-size: 16px;
+    }
+
+    .pay-btn:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .pay-btn:active {
+        transform: scale(0.99);
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   320px – 374px
+========================================= */
+
+@media (max-width: 374px) {
+
+    .registration-overlay {
+        padding: 10px;
+    }
+
+    .registration-modal {
+        max-height: calc(100dvh - 20px);
+        border-radius: 14px;
+    }
+
+    .registration-header {
+        padding: 24px 42px 22px 16px;
+    }
+
+    .registration-header h2 {
+        font-size: 1.35rem;
+    }
+
+    .registration-header p {
+        font-size: 13px;
+    }
+
+    .registration-form {
+        padding: 20px 16px 24px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        height: 46px;
+        padding: 0 12px;
+        font-size: 14px;
+    }
+
+    .pay-btn {
+        height: 50px;
+        font-size: 15px;
+    }
+}
 }

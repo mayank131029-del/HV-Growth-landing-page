@@ -105,73 +105,178 @@
 })();
 
 
-const registrationOverlay =
-  document.querySelector(".registration-overlay");
+document.addEventListener("DOMContentLoaded", () => {
 
-const registrationModal =
-  document.querySelector(".registration-modal");
+    const overlay = document.querySelector(".registration-overlay");
+    const modal = document.querySelector(".registration-modal");
+    const closeBtn = document.querySelector(".registration-close");
+    const form = document.querySelector(".registration-form");
 
-const closeBtn =
-  document.querySelector(".close-btn");
-
-
-/* ================================
-   OPEN REGISTRATION
-================================ */
-
-function openRegistration() {
-
-  registrationOverlay.classList.add("active");
-
-  document.body.style.overflow = "hidden";
-}
+    if (!overlay || !modal || !closeBtn || !form) return;
 
 
-/* ================================
-   CLOSE REGISTRATION
-================================ */
+    /* =================================
+       OPEN MODAL
+    ================================= */
 
-function closeRegistration() {
-
-  registrationOverlay.classList.remove("active");
-
-  document.body.style.overflow = "";
-}
+    function openRegistration() {
+        overlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
 
 
-/* ================================
-   CLOSE BUTTON
-================================ */
+    /* =================================
+       CLOSE MODAL
+    ================================= */
 
-closeBtn.addEventListener("click", function () {
-  closeRegistration();
+    function closeRegistration() {
+        overlay.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+
+    /* =================================
+       CLOSE BUTTON
+    ================================= */
+
+    closeBtn.addEventListener("click", closeRegistration);
+
+
+    /* =================================
+       CLICK OUTSIDE MODAL
+    ================================= */
+
+    overlay.addEventListener("click", (e) => {
+
+        if (e.target === overlay) {
+            closeRegistration();
+        }
+
+    });
+
+
+    /* =================================
+       ESCAPE KEY
+    ================================= */
+
+    document.addEventListener("keydown", (e) => {
+
+        if (e.key === "Escape" && overlay.classList.contains("active")) {
+            closeRegistration();
+        }
+
+    });
+
+
+    /* =================================
+       OPEN BUTTONS
+       
+       Any button/link with:
+       data-registration
+       will open the modal.
+    ================================= */
+
+    document.querySelectorAll("[data-registration]").forEach((button) => {
+
+        button.addEventListener("click", (e) => {
+
+            e.preventDefault();
+
+            openRegistration();
+
+        });
+
+    });
+
+
+    /* =================================
+       FORM SUBMIT
+    ================================= */
+
+    form.addEventListener("submit", (e) => {
+
+        e.preventDefault();
+
+        const name = document.querySelector("#name");
+        const email = document.querySelector("#email");
+        const mobile = document.querySelector("#mobile");
+        const city = document.querySelector("#city");
+
+        if (!name || !email || !mobile || !city) return;
+
+
+        /* Basic validation */
+
+        if (!name.value.trim()) {
+            name.focus();
+            return;
+        }
+
+
+        if (!email.value.trim() || !email.validity.valid) {
+            email.focus();
+            return;
+        }
+
+
+        if (!/^[6-9]\d{9}$/.test(mobile.value.trim())) {
+            mobile.focus();
+            return;
+        }
+
+
+        if (!city.value.trim()) {
+            city.focus();
+            return;
+        }
+
+
+        /*
+         * Form is valid.
+         *
+         * Add your payment gateway/API
+         * integration here.
+         */
+
+        console.log("Registration form is valid");
+
+    });
+
+
+    /* =================================
+       MOBILE NUMBER
+       Allow numbers only
+    ================================= */
+
+    const mobileInput = document.querySelector("#mobile");
+
+    if (mobileInput) {
+
+        mobileInput.addEventListener("input", () => {
+
+            mobileInput.value = mobileInput.value
+                .replace(/\D/g, "")
+                .slice(0, 10);
+
+        });
+
+    }
+
+
+    /* =================================
+       PREVENT MODAL SCROLL FROM
+       AFFECTING BACKGROUND
+    ================================= */
+
+    modal.addEventListener("wheel", (e) => {
+        e.stopPropagation();
+    });
+
 });
 
 
-/* ================================
-   CLICK OUTSIDE MODAL
-================================ */
-
-registrationOverlay.addEventListener("click", function (e) {
-
-  if (!registrationModal.contains(e.target)) {
-    closeRegistration();
-  }
-
-});
 
 
-/* ================================
-   ESC KEY
-================================ */
-
-document.addEventListener("keydown", function (e) {
-
-  if (e.key === "Escape") {
-    closeRegistration();
-  }
-
-});
 let vh = 0
 window.addEventListener("resize", () => {
   vh = window.innerHeight

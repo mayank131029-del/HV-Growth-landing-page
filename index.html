@@ -16,53 +16,139 @@
 
 
     <!-- Registration Overlay -->
-    <section class="registration-overlay">
+    <section class="registration-overlay" id="registrationOverlay">
 
-        <div class="registration-modal">
+    <div class="registration-modal">
 
-            <!-- Header -->
-            <div class="registration-header">
-                <button class="close-btn">&times;</button>
+        <!-- Close -->
+        <button class="registration-close" type="button" aria-label="Close">
+            &times;
+        </button>
 
-                <h2>Registration</h2>
-                <p>Fill in the details to proceed with payment.</p>
-            </div>
+        <!-- Header -->
+        <div class="registration-header">
 
-            <!-- Form -->
-            <form class="registration-form" action="" method="post">
+            <span class="registration-badge">
+                Registration
+            </span>
 
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter your full name">
-                </div>
+            <h2>Complete Your Registration</h2>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email address">
-                </div>
-
-                <div class="form-group">
-                    <label for="mobile">Mobile Number</label>
-                    <input type="tel" id="mobile" placeholder="Enter 10-digit mobile number">
-                </div>
-                <div class="form-group">
-                    <label for="city">City Name</label>
-                    <input type="tel" id="city" placeholder="Enter city">
-                </div>
-                <div class="form-group">
-                    <label for="business">Business Name</label>
-                    <input type="tel" id="business" placeholder="Enter your Business name">
-                </div>
-
-                <button type="submit" class="pay-btn">
-                    Pay & Register
-                </button>
-
-            </form>
+            <p>
+                Enter your details below to continue with your registration and payment.
+            </p>
 
         </div>
 
-    </section>
+
+        <!-- Form -->
+        <form class="registration-form">
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+
+                    <div class="input-box">
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <div class="input-box">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+
+                    <div class="input-box">
+                        <input
+                            type="tel"
+                            id="mobile"
+                            name="mobile"
+                            placeholder="10-digit mobile number"
+                            maxlength="10"
+                            required
+                        >
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="city">City</label>
+
+                    <div class="input-box">
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            placeholder="Enter your city"
+                            required
+                        >
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+                <label for="business">Business Name</label>
+
+                <div class="input-box">
+                    <input
+                        type="text"
+                        id="business"
+                        name="business"
+                        placeholder="Enter your business name"
+                    >
+                </div>
+            </div>
+
+
+            <div class="registration-note">
+                <span class="note-icon">✓</span>
+
+                <p>
+                    Your information is secure and will only be used for registration.
+                </p>
+            </div>
+
+
+            <button type="submit" class="pay-btn">
+
+                <span>Pay & Register</span>
+
+                <span class="pay-arrow">→</span>
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
     <!-- ============ TOP BAR ============ -->
     <div class="topbar">
         <div class="topbar__inner">
@@ -85,7 +171,7 @@
 
                 </div>
             </div>
-            <a onclick="openRegistration()" class="btn btn--green btn--sm topbar-CTA">Reserve Your Seat </span><i
+            <a data-registration class="btn btn--green btn--sm topbar-CTA">Reserve Your Seat </span><i
                     class="fa-solid btn__icon fa-arrow-right"></i></a>
         </div>
     </div>
@@ -124,7 +210,7 @@
                 </li>
             </ul>
 
-            <a onclick="openRegistration()" class="btn btn--green btn--lg">Reserve Your Seat <i
+            <a data-registration class="btn btn--green btn--lg">Reserve Your Seat <i
                     class="fa-solid btn__icon fa-arrow-right"></i></a>
         </div>
     </header>
@@ -266,7 +352,7 @@
             </div>
 
             <p class="center-note"></p>
-            <div class="center-cta"><a onclick="openRegistration()" class="btn btn--green btn--lg">Reserve Your Seat
+            <div class="center-cta"><a data-registration class="btn btn--green btn--lg">Reserve Your Seat
                     <i class="fa-solid btn__icon fa-arrow-right"></i></a></div>
         </div>
     </section>
@@ -521,7 +607,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a onclick="openRegistration()" class="finalCTA btn">Reserve Your Seat <i
+                        <a data-registration class="finalCTA btn">Reserve Your Seat <i
                                 class="fa-solid btn__icon fa-arrow-right"></i></a>
                     </div>
                     <div class="panel__final-right">

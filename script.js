@@ -325,3 +325,9 @@ function autoTestimonial() {
 setInterval(autoTestimonial, 3000);
 
 
+let logo = document.querySelectorAll(".brand")
+logo.forEach((item)=>{
+  item.addEventListener("click",()=>{
+    location.href = "https://www.hvgrowth.in"
+  })
+})

@@ -129,6 +129,7 @@ ul {
 }
 
 .btn__icon {
+    transition: var(--transition-fast);
     /* color: red; */
     transform: rotate(-45deg);
 }
@@ -242,6 +243,9 @@ h3 {
     transform: translateY(-2px);
     box-shadow: 0 10px 24px rgba(34, 150, 53, 0.35);
 }
+.btn--green:hover .btn__icon{
+    transform: rotate(45deg);
+}
 
 .btn--lg {
     padding: var(--space-4) var(--space-7);
@@ -260,6 +264,14 @@ h3 {
 
 .btn:hover .btn__arrow {
     transform: translate(2px, -2px);
+}
+.finalCTA:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(34, 150, 53, 0.35);
+}
+.finalCTA:hover .btn__icon{
+    transform: rotate(45deg);
+
 }
 
 a:focus-visible,
@@ -2184,6 +2196,9 @@ input:focus-visible {
         gap: var(--space-2);
         flex-direction: column;
     }
+    .full-width{
+        padding: 0;
+    }
 
     .testi-row {
         display: flex;
@@ -2215,12 +2230,12 @@ input:focus-visible {
     .testi {
         flex: 0 0 100%;
 
-        width: 100%;
-        min-width: 100%;
+        /* width: 100%; */
+        min-width: 80%;
 
         box-sizing: border-box;
 
-        scroll-snap-align: start;
+        scroll-snap-align: center;
         scroll-snap-stop: always;
     }
 

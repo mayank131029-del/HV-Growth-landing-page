@@ -1137,6 +1137,12 @@ input:focus-visible {
     border-radius: var(--radius-sm);
     /* margin-bottom: var(--space-3); */
 }
+.testi__avatar img{
+    border-radius: var(--radius-sm);
+    height: 100%;
+    width: 100%;
+ 
+}
 
 .testi_user {
     gap: 0;
